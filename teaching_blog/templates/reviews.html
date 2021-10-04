@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="container">
+ <div class="row">
+  <div class="col-md-12">
+   <div class="courses" id='reviews'>
+   <h1 class='hi'>Отзывы клиентов</h1>
+    <p class='description'>За все время работы не было ни одного негативного отзыва, а мои ученики становились победителями всероссийских олимпиад и успешно сдавали второй уровень экзамена по японскому языку Нихонго Норёку сихен.</p>
+    <div class='reviews d-flex justify-content-center align-items-center '>
+    <div id="slider-wrap">
+     <div id="active-slide">
+        <div id="slider">
+            <div class="slide"><img src="{% static 'img/review1.png' %}"></div>
+            <div class="slide"><img src="{% static 'img/review1.png' %}"></div>
+            <div class="slide"><img src="{% static 'img/review1.png' %}"></div>
+            <div class="slide"><img src="{% static 'img/review1.png' %}"></div>
+        </div>
+      </div>
+     </div>
+     </div>
+	<button type="button" class="download">Все отзывы</button>
+	<script src="{% static 'js/slider.js' %}"></script>
+
+  </div>
+ </div>
+</div>
+</div>

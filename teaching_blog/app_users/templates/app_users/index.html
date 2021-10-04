@@ -1,0 +1,44 @@
+{% extends 'base.html'  %}
+
+
+{% load static %}
+{%block title %}index page{% endblock%}
+
+{% block content %}
+
+<main class="mt-5 d-flex mb-5 justify-content-center" style="width: 80%;margin-left:10%;">
+    <!-- section 1 for standards-->
+
+    <!-- class row2 for cards -->
+<section class="row">
+    <div class="row">
+    {% for standard in standards %}
+    <div class="col-md-6 d-flex justify-content-center">
+        <div class='steps'>
+            <div class="block-right">
+                <h3 class='month'>
+                {{standard.name}}<span style='color:#e7e7e7;'>|</span> <span class='during'>В течении курса мы освоим:</span></h3>
+                <p class="info">{{standard.description|truncatechars:75}}</p>
+            ``  <h2 class='price'><img class="fit-picture justify-content-left" src="{% static 'img/ruble.png'%}" alt=" ">
+                    <span style='padding-right:20%;font-size: 25px;
+	                letter-spacing: 0px;
+	                line-height: 25px;
+	                color: #ed525e;
+	                font-weight: 800;
+	                font-family: "Core Sans A75 Extra Bold";
+	                text-align: center;'> 3400 руб.</span>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'curriculum:subject_list' slug=standard.slug %}" class="buy">Начать обучение</a></h2>
+                    {%else%}
+                    <a href="{% url 'user_login' %}"><button type="button" class="buy">Войти</button></a></h2>
+                    {%endif%}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</section>
+</main>
+
+{%endblock%}
+{% include "reviews.html" %}

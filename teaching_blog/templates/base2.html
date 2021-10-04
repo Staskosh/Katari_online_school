@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<style>
+#example1 {
+  border:;
+  padding: 25px;
+  background: url(..Backs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Katari japanese</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+  <script type="text/javascript" src=" https://code.jquery.com/jquery-1.11.2.js "></script>
+  <script src = "{% static 'js/main-min.js' %}"></script>
+  <script src = "{% static 'js/slider.js' %}"></script>
+</head>
+<body>
+<div id="example1">
+    <a href="#" class="go_to_top"><img class="logo" src="{% static 'img/up.png'%}" alt=" "></a>
+    <header>
+    <div class="container">
+      <div class="header-top">
+	    <div><a href="#info" >
+            <img class="logo" src="{% static 'img/logo.png'%}" alt=" "></a></div>
+	        <ul>
+            <li ><a href="#main" >Главная</a></li>
+            <li ><a href="#about" >Обо мне</a></li>
+            <li ><a href="#steps" >Мои курсы</a></li>
+            <li ><a href="#reviews">Отзывы</a></li>
+	        <li ><a href="#question">Задать вопрос</a></li>
+                {% if user.is_superuser %}
+            <li class="nav-item "><a class="nav-link" href="{% url 'admin:index' %}">Администратор</span> </a></li>
+                {%endif%}
+                {% if user.is_authenticated %}
+            <li class="nav-item  "><a class="nav-link" href="{% url 'user_logout' %}">Выйти</a></li>
+                {% else %}
+            <li ><a href="{% url 'user_login' %}">Войти</a></li>
+            <li ><a href="{% url 'register' %}">Зарегистрироваться</span> </a></li>
+                {% endif %}
+            </ul>
+      </div>
+    </div>
+
+
+        {%block content%}
+        {%endblock%}
+
+
+
+    <footer class="page-footer" style="background-color:#b2ebf2;">
+        <div class="contacts" id='question' style='background-color: #ed525e;margin-top:30px;'>
+  <h2 style="font-size: 42px; padding-top: 10px; padding-bottom: 5px;">Есть вопросы?</h2>
+  <div class="col-md-16" style="font-size: 21px; padding-bottom: 5px;">Если у вас есть какие-то вопросы ко мне или нужна консультация - заполните заявку и я свяжусь с вами.</div>
+  <form class="block" action="https://app.form2chat.io/f/11787598" method="POST"></a>
+	<input class="name" type="name" id="name" name="first_name" required placeholder="Имя">
+  	<input class="tel" type="tel" id="tel" name="phone" required placeholder="Телефон">
+  	<input class="email" type="email" id="email" name="email" required placeholder="E-mail">
+	<input class="message" type="message" id="message" name="message" required placeholder="Введите сообщение">
+  	<button type="submit" class="send" id='submit' name="submit" value="Submit">Отправить</button>
+  </form>
+	<div class='connect'>
+    <a href="http://t.me/skoshenkov"><img class="" style='padding-right:2px; padding-left:2px;' src="{% static 'img/vk.png' %}" alt=" ">Написать в Телеграм</a>
+    <a href="https://wa.me/79038481534"><img class=" " style='padding-right:2px; padding-left:2px;' src="{% static 'img/insta.png' %}" alt=" "> Написать в Whatsapp</a>
+    <a href="https://instagram.com/katari_japanese/"><img class=" " style='padding-right:2px; padding-left:2px;' src="{% static 'img/youtube.png' %}" alt=" "> Написать в Инстаграм</a>
+    </div>
+</div>
+</div>
+
+<div class="container" style="display: flex; justify-content: space-between">
+ <div><img class="logo" src="{% static 'img/logo.png' %}" alt=" "></div>
+ <div style="text-align: right">
+	 <ul class='nav'>
+	  <li ><a href="">Главная</a></li>
+	  <li ><a href="">Обо мне</a></li>
+	  <li ><a href="">Мои курсы</a></li>
+	  <li ><a href="">Отзывы</a></li>
+	  <li ><a href="">Задать вопрос</a></li>
+	 </ul>
+	 <div class='cont' style="margin-top:35px;"> <img class=" " style='padding-right:15px;' src="{% static 'img/phone.png' %}" alt=" "> +79038481534 <img class=" " style='padding-right:15px; padding-left:15px;' src="{% static 'img/email.png' %}" alt=" "> katari_japanese@mail.ru <img class=" " style='padding-right:2px; padding-left:2px;' src="{% static 'img/vk.png' %}" alt=" "> <img class=" " style='padding-right:2px; padding-left:2px;' src="{% static 'img/insta.png' %}" alt=" "> <img class=" " style='padding-right:2px; padding-left:2px;' src="{% static 'img/youtube.png' %}" alt=" "></div>
+ </div>
+</div>
+    </footer>
+  </body>
+</html>

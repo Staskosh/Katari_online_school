@@ -1,0 +1,32 @@
+Received: from mx15.mail.rambler.ru ([10.5.5.25] verified)
+  by mail476.rambler.ru (RamblerMail 6.1 SMTP 6.1a7)
+  with ESMTP id 78882988 for staskoshenkov@rambler.ru; Tue, 04 May 2021 17:08:08 +0300
+Received: from mxout1.rambler.ru (mxout1.rambler.ru [81.19.78.100])
+	by mx15.mail.rambler.ru (Postfix) with ESMTP id 146917E034A
+	for <staskoshenkov@rambler.ru>; Tue,  4 May 2021 17:08:08 +0300 (MSK)
+Received: from mxout1.rambler.ru (mxout1.rambler.ru [81.19.78.100])
+	by resmtp2.mail.rambler.ru (resmtp/Rambler) with ESMTP id 7u1SOaC0;
+	Tue,  4 May 2021 14:07:56 +0000
+Received: from saddam1.rambler.ru (saddam1.rambler.ru [10.32.16.1])
+	by mxout1.rambler.ru (Postfix) with ESMTP id 36E8DC2C045
+	for <staskoshenkov@rambler.ru>; Tue,  4 May 2021 17:07:56 +0300 (MSK)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rambler.ru; s=mail;
+	t=1620137276; bh=GLEW/B8zDuXW6RUMajzMqeK8RmZwbOavGQ1RNl6qQ2w=;
+	h=From:To:Reply-To:Date;
+	b=NEBYWrm6mF0we+ChRk9qUFPGZZDedSBfL3LKRu9VUA6mNhixKcGmy50j1OqwolxF5
+	 fIswvEH0WRXWEhQ4w2yp4+SgpIeV9FEhAX0loXgOZhBwYMOezxCSFOOiw8lLvwl6HO
+	 8ukehzijRNmO6RI0ZCRsiaoC5MCXAvzLaEC0pVmM=
+Received: from localhost.localdomain (localhost [127.0.0.1])
+	by saddam1.rambler.ru (Postfix) with ESMTP id DB0551F92F0
+	for <staskoshenkov@rambler.ru>; Tue,  4 May 2021 17:07:55 +0300 (MSK)
+Received: from [79.122.221.182] by mail.rambler.ru with HTTP; Tue, 4 May 2021 17:07:55 +0300
+From: =?koi8-r?B?89TB0yDrz9vFzsvP1w==?= <staskoshenkov@rambler.ru>
+To: "Staskoshenkov" <staskoshenkov@rambler.ru>
+Reply-To: =?koi8-r?B?89TB0yDrz9vFzsvP1w==?= <staskoshenkov@rambler.ru>
+Date: Tue, 4 May 2021 17:07:55 +0300
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/mixed; boundary="_----------=_1620137275374841"
+Message-Id: <1620137275.771211.3748.7674@mail.rambler.ru>
+MIME-Version: 1.0
+X-Mailer: Rambler WebMail, http://mail.rambler.ru/
+X-Rambler-User: staskoshenkov@rambler.ru/79.122.221.182
